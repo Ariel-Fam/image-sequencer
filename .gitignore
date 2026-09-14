@@ -1,0 +1,29 @@
+# Python envs & builds
+venv/
+.venv/
+env/
+lib/
+Lib/
+**/__pycache__/
+*.py[cod]
+build/
+dist/
+*.env
+.env
+
+# Node
+node_modules/
+
+# Big binaries & artifacts
+*.mp4
+*.mov
+*.mkv
+*.dylib
+*.so
+*.pkl
+*.pt
+*.onnx
+*.zip
+*.tar
+*.tar.gz
+*.bin

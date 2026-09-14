@@ -1,0 +1,32 @@
+# .streamlit/config.toml
+
+[server]
+headless = true
+address = "0.0.0.0"
+port = 8501
+enableCORS = false
+enableXsrfProtection = false
+enableWebsocketCompression = false
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"
+serverPort = 8501
+
+[theme]
+base = "light"
+
+# Sky blue buttons, sliders, and interactive accents
+primaryColor = "#87CEEB"
+
+# Light olive green main background
+backgroundColor = "#0A2B1E"
+
+# Pale sky blue sidebar and input backgrounds
+secondaryBackgroundColor = "#02CCFE"
+
+# Black text
+textColor = "#000000"
+
+font = "sans serif"
