@@ -15,7 +15,7 @@ import cv2
 import streamlit as st
 
 
-MAX_ZIP_BYTES = 200 * 1024 * 1024
+MAX_ZIP_BYTES = 500 * 1024 * 1024
 
 
 def extract_frames(video_path, zip_path, every_n=1, image_format="PNG",
@@ -70,7 +70,7 @@ def extract_frames(video_path, zip_path, every_n=1, image_format="PNG",
             if not saved:
                 raise ValueError("No frames could be decoded. The file may be damaged or unsupported.")
         if Path(zip_path).stat().st_size > MAX_ZIP_BYTES:
-            raise ValueError("ZIP exceeds 200 MB. Increase the frame interval and try again.")
+            raise ValueError("ZIP exceeds 500 MB. Increase the frame interval and try again.")
         return saved, fps, preview
     finally:
         capture.release()
@@ -107,7 +107,7 @@ def main():
         quality = st.slider("JPG quality", 50, 100, 90,
                             disabled=image_format == "PNG", on_change=clear_result)
     st.caption("PNG preserves frame detail; JPG usually makes a smaller ZIP. "
-               "Images retain their aspect ratio. ZIP output is limited to 200 MB.")
+               "Images retain their aspect ratio. ZIP output is limited to 500 MB.")
     if video is not None:
         st.caption(f"Selected: {video.name} · {video.size / 1024**2:.1f} MB")
     if st.button("Extract frames", type="primary", disabled=video is None):

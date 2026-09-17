@@ -27,6 +27,6 @@ backgroundColor = "#0A2B1E"
 secondaryBackgroundColor = "#02CCFE"
 
 # Black text
-textColor = "#000000"
+textColor = "#FFFFFF"
 
 font = "sans serif"
