@@ -1,6 +1,10 @@
-bin/
-include/
-lib/
-share/
-etc/
-pyvenv.cfg
+# Only send the runtime files to Docker. Exclude local environments, Git,
+# editor files, secrets, uploaded videos, and generated output by default.
+**
+!Dockerfile
+!requirements.txt
+!main.py
+!softwareLogo.png
+!SpacePointer.PNG
+!.streamlit/
+!.streamlit/config.toml

@@ -1,7 +1,7 @@
 """Video to image sequence — a local Streamlit app.
 
-Install: python -m pip install streamlit opencv-python-headless
-Run:     python -m streamlit run video_to_frames.py
+Install: python -m pip install -r requirements.txt
+Run:     python -m streamlit run main.py
 Larger uploads: add --server.maxUploadSize 500 to the run command.
 """
 
